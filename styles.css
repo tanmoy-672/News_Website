@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    line-height: 1.6;
+}
+
+h1{
+    font: size 36px;;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0px 60px 0px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#Search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: 2px solid #bbd0e2;
+    font-size: 18px;
+    border-radius: 5px;
+    color:#333;
+    box-shadow: #333;
+
+}
+
+#search-button{
+    color: white;
+    background-color:deepskyblue;
+    padding:10px 20px ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 14px;
+    font: size 18px; ;
+}
+
+#search-button:hover{
+    background-color:lightskyblue;
+}
+
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 6px #bbd0e2;
+}
+
+.search-result img{
+    width: 100%;
+    height: 200px; /* every image(only picture part) will be of same height means 200px */
+    object-fit: cover;
+    transition:opacity 0.2s ease-in-out;
+}
+
+.search-result:hover img{
+    opacity: 0.7;
+}
+
+.search-result a {
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: capitalize;
+    color:#333;
+
+}
+
+#show-more-button{
+    color: white;
+    background-color: cornflowerblue;
+    cursor:pointer;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin : 30px auto ;
+    display: block;
+    display: none;
+}
+
+@media screen and (max-width:768px){ /* for large scene device */
+    .search-result{
+        padding: 15px;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:480px){ /* for small scene device*/
+    .search-result{
+        width: 100%;
+    }
+}
